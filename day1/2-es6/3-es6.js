@@ -32,8 +32,13 @@
 
 // 2.
 // const color = ['red', 'green', 'blue'];
-// let [color1, color2, color3] = color;
-// console.log(color1, color2, color3);
+
+// let color0 = color[0]
+// let color1 = color[1]
+// let color2 = color[2]
+
+// let [color0, renk1, color2] = color;
+// console.log(color0, renk1, color2);
 
 // 3.
 // function logUser({ name, age, profile: { friends } }) {
@@ -44,8 +49,8 @@
 
 // logUser({ name: 'Burak', age: 22, profile: { friends: 40 } });
 
-const name = 'Mehmet';
-const surname = 'Seven';
+// const name = 'Mehmet';
+// const surname = 'Seven';
 
-console.log('Hoş geldin ' + name + ' ' + surname + ', nasılsın?');
-console.log(`Hoş geldin ${name} ${surname}, nasılsın?`);
+// console.log('Hoş geldin ' + name + ' ' + surname + ', nasılsın?');
+// console.log(`Hoş geldin ${name} ${surname}, nasılsın?`);
