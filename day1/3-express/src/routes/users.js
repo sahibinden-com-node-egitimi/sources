@@ -25,7 +25,7 @@ router.get('/', (req, res) => {
   res.json(users);
 });
 
-router.get('/:id', (req, res) => {
+router.get('/:id', (req, res, next) => {
   const { id } = req.params;
 
   const user = users.find((user) => user.id === Number(id));
@@ -34,7 +34,7 @@ router.get('/:id', (req, res) => {
     return res.json(user);
   }
 
-  res.status(404).end('User not found');
+  next('Error user not found');
 });
 
 router.post('/', (req, res) => {
