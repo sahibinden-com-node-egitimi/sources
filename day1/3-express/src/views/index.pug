@@ -1,12 +1,11 @@
-include header
+extends layout
 
-div#root
-  h1 #{title}
-  h4 #{name}
-  div.child.title
-    | Div 1
-  div(id="div2", class="bar")
-    | Div 2
+block append stylesheets
+  link(rel="stylesheet", href="stylesheets/index.css")
 
-include footer
-  
+block content
+  div
+    h1 Sahibinden.com
+
+block append javascripts 
+  script(src="js/index.js")

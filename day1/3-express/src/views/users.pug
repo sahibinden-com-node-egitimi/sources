@@ -1,18 +1,22 @@
-include header
+extends layout
 
-div
-  - var authorised = true
+block append stylesheets
+  link(rel="stylesheet", href="stylesheets/users.css")
 
-  div 
-    if authorised
-      h2 Welcome
-    else
-      a(href="/login") Please login
+block content
+  div
+    - var authorised = true
 
-  ul
-    each user in users
-      li= user.name
+    div 
+      if authorised
+        h2 Welcome
+      else
+        a(href="/login") Please login
+
+    ul
+      each user in users
+        li= user.name
   
 
-include footer
-  
+block append javascripts 
+  script(src="js/users.js")
