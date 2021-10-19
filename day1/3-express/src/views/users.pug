@@ -1,0 +1,18 @@
+include header
+
+div
+  - var authorised = true
+
+  div 
+    if authorised
+      h2 Welcome
+    else
+      a(href="/login") Please login
+
+  ul
+    each user in users
+      li= user.name
+  
+
+include footer
+  

@@ -22,7 +22,9 @@ const users = [
 ];
 
 router.get('/', (req, res) => {
-  res.json(users);
+  res.render('users', {
+    users,
+  });
 });
 
 router.get('/:id', (req, res, next) => {

@@ -1,6 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import createError from 'http-errors';
+import path from 'path';
 
 // routes
 import Index from './routes';
@@ -9,6 +10,8 @@ import Settings from './routes/settings';
 
 const app = express();
 
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/', Index);
