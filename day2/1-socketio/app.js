@@ -14,11 +14,18 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
+let activeColor = '#FFFF00';
+
 io.on('connection', (socket) => {
   console.log('a user connected');
 
-  socket.on('new-color', (data) => {
-    console.log('Bir veri geldi:', data);
+  socket.emit('new-color', activeColor);
+
+  socket.on('new-color', (color) => {
+    console.log('New Color:', color);
+
+    socket.broadcast.emit('new-color', color);
+    activeColor = color;
   });
 
   socket.on('disconnect', () => {

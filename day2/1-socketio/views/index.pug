@@ -8,8 +8,10 @@ html(lang="en")
     link(rel="stylesheet", href="/css/main.css")
   body 
     .container
-      input(type="color")
-      button#submitBtn Submit
+      h1.activeColorCode
+      div.controls
+        input#picker(type="color")
+        button#submitBtn Submit
 
 
     script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js")
